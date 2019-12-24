@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Engine control node -->
+    <node name="DriveControl" pkg="rover_core" type="drive_control_node.py"/>
+</launch>
