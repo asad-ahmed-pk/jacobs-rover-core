@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # drive_control_node.py
 # Subscriber node - subscribes to /drive/cmd_vel and sends commands to RC motor
 # Responsible for direct motor-control of the rover
@@ -5,7 +7,7 @@
 import rospy
 
 from RoverEngine import RoverEngine
-from geometry_msgs import Twist
+from geometry_msgs.msg import Twist
 
 # global engine control
 engine = RoverEngine()
@@ -37,7 +39,7 @@ def run_node():
     """ Node main function """
 
     # ros node setup
-    rospy.init_node('drive_control', anonymous=False)
+    rospy.init_node('drive_control_node', anonymous=False)
     rospy.Subscriber('/drive/cmd_vel', Twist, cmd_vel_callback)
 
     try:
