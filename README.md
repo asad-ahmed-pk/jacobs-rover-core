@@ -26,4 +26,10 @@ Use the provided launch file to launch all core nodes:
 roslaunch rover_core start_core.xml
 ```
 
+
+### Operational ROS nodes / topics
+
+1. Motor and Steering control **/drive/cmd_vel/**
+Post a twist message linear.x (throttle) [-1.0, 1.0] and angular.z (steer) [-1.0, 1.0]
+
 **Note**: This repository will be updated as the rover ROS platform is currently a work in progress.
